@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="bigdata_api_data_view_form" model="ir.ui.view">
+             <field name="name">bigdata.api.data.view.form</field>
+             <field name="model">bigdata.api.data</field>
+             <field name="arch" type="xml">
+                 <form string="Big Data API Data">
+                     <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="country"/>
+                            <field name="region"/>
+                            <field name="last_updated"/>
+                            <field name="tz_id"/>
+                        </group>
+                        <group>
+                            <field name="lat"/>
+                            <field name="lon"/>
+                            <field name="is_day"/>
+                            <field name="condition"/>
+                        </group>
+                        <group>
+                            <field name="temp_c"/>
+                            <field name="wind_kph"/>
+                            <field name="wind_degree"/>
+                            <field name="wind_dir"/>
+                            <field name="pressure_mb"/>
+                            <field name="precip_mm"/>
+                            <field name="humidity"/>
+                            <field name="cloud"/>
+                            <field name="feelslike_c"/>
+                            <field name="vis_km"/>
+                            <field name="uv"/>
+                            <field name="gust_kph"/>
+                        </group>
+                     </sheet>
+                 </form>
+             </field>
+         </record>
+
+         <record id="bigdata_api_data_view_search" model="ir.ui.view">
+            <field name="name">bigdata.api.data.search</field>
+            <field name="model">bigdata.api.data</field>
+            <field name="arch" type="xml">
+                <search string="Search Bank Statements">
+                    <field name="name" string="Bank Statement"/>
+                    <field name="last_updated"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Name" name="name" context="{'group_by': 'name'}"/>
+                        <filter name="last_updated" context="{'group_by': 'last_updated'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+         <record id="bigdata_api_data_view_tree" model="ir.ui.view">
+             <field name="name">bigdata.api.data.view.tree</field>
+             <field name="model">bigdata.api.data</field>
+             <field name="arch" type="xml">
+                 <tree string="Big Data API Datas">
+                    <field name="name"/>
+                    <field name="last_updated"/>
+                    <field name="temp_c"/>
+                    <field name="humidity"/>
+                    <field name="wind_kph"/>
+                    <field name="feelslike_c"/>
+                 </tree>
+             </field>
+         </record>
+
+         <record id="action_bigdata_api_data_view_tree" model="ir.actions.act_window">
+             <field name="name">Big Data API Data</field>
+             <field name="res_model">bigdata.api.data</field>
+             <field name="view_mode">tree,form</field>
+         </record>
+    </data>
+ </odoo>

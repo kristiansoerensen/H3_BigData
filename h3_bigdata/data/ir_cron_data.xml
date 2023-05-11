@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ir_cron_call_api" model="ir.cron">
+        <field name="name">Big Data: Call API</field>
+        <field name="interval_number">10</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(DateTime.now() + timedelta(minutes=10)).strftime('%Y-%m-%d %H:%M:%S')" />
+        <field name="doall" eval="False"/>
+        <field name="model_id" ref="model_bigdata_api_settings"/>
+        <field name="code">model._cron_call_api()</field>
+        <field name="state">code</field>
+    </record>
+</odoo>

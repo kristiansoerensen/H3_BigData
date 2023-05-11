@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <record id="bigdata_api_settings_view_tree" model="ir.ui.view">
+             <field name="name">bigdata.api.settings.view.tree</field>
+             <field name="model">bigdata.api.settings</field>
+             <field name="arch" type="xml">
+                 <tree string="Big Data API Settings" editable="bottom">
+                    <field name="name"/>
+                    <field name="base_url"/>
+                    <field name="api_key"/>
+                    <field name="q"/>
+                 </tree>
+             </field>
+         </record>
+
+         <record id="action_bigdata_api_settings_view_tree" model="ir.actions.act_window">
+             <field name="name">Big Data API Settings</field>
+             <field name="res_model">bigdata.api.settings</field>
+             <field name="view_mode">tree</field>
+         </record>
+
+         <menuitem
+                id="menu_bigdata"
+                name="Big Data"
+                sequence="10"/>
+
+         <menuitem
+                id="menu_bigdata_api_settings"
+                name="APi Settings"
+                action="action_bigdata_api_settings_view_tree"
+                parent="menu_bigdata"
+                sequence="10"/>
+
+     </data>
+ </odoo>
