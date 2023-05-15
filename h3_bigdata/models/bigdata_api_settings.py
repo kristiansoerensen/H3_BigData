@@ -51,7 +51,7 @@ class BigDataAPISettings(models.Model):
             'uv': data['current']['uv'],
             'gust_kph': data['current']['gust_kph'],
         })
-
+        
         _logger.info(f"record created {record.id}")
 
     @api.model
