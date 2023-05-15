@@ -1,6 +1,6 @@
 # H3_BigData
 
-This is a big data module for installation in Odoo v16
+This is a big data module for installation in Odoo v16, this api retrives the latest data from weatherapi.com
 
 ## Installation
 Upload the module to your odoo addons folder, and update the module list in Odoo and click activate
@@ -22,3 +22,6 @@ On install, the bigdata_settings table will be loaded with 20 records of setting
 
 ## Weatherapi.com
 Data is updated ~15 min.
+
+### v1
+Cron job calls weatherapi.com every 10 minutes and prevents data redundency, because the api updates the data every ~15 min
