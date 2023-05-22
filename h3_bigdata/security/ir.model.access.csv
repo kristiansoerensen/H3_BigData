@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 h3_bigdata.access_bigdata_api_settings,access_bigdata_api_settings,h3_bigdata.model_bigdata_api_settings,base.group_user,1,1,1,1
 h3_bigdata.access_bigdata_api_data,access_bigdata_api_data,h3_bigdata.model_bigdata_api_data,base.group_user,1,1,1,1
+h3_bigdata.access_bigdata_warehouse,access_bigdata_warehouse,h3_bigdata.model_bigdata_warehouse,base.group_user,1,1,1,1
+h3_bigdata.access_bigdata_warehouse_line,access_bigdata_warehouse_line,h3_bigdata.model_bigdata_warehouse_line,base.group_user,1,1,1,1

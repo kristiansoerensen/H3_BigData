@@ -3,10 +3,12 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
-class BigDataAPISettings(models.Model):
-    _name = 'bigdata.api.data'
-    _description = "Big Data API Data"
+class BigDataWarehouseLine(models.Model):
+    _name = 'bigdata.warehouse.line'
+    _description = "Big Data warehouse lines"
     _order = "last_updated"
+
+    warehouse_id = fields.Many2one("bigdata.warehouse", string="Warehouse", required=True, ondelete="cascade")
 
     name = fields.Char("Name")
     region = fields.Char("Region")
@@ -30,8 +32,22 @@ class BigDataAPISettings(models.Model):
     uv = fields.Float("UV", group_operator='avg')
     gust_kph = fields.Float("Gust kph")
 
-    def _map_and_save_api_data(self, data):
-        record = self.env['bigdata.api.data'].create({
+    @api.model
+    def _map_and_save_mongodb_document(self, data, warehouse_id):
+        if not 'location' in data:
+            _logger.error(f"Error data: {data}")
+            return
+        
+        if self.env['bigdata.warehouse.line'].search_count([
+            ('warehouse_id', '=', warehouse_id.id),
+            ('last_updated', '=', data['current']['last_updated']), 
+            ('name', '=', data['location']['name'])
+            ]):
+            _logger.info("Skipping record, does already exist!")
+            return
+
+        record = self.env['bigdata.warehouse.line'].create({
+            'warehouse_id': warehouse_id.id,
             'name': data['location']['name'],
             'region': data['location']['region'],
             'country': data['location']['country'],

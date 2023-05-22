@@ -2,6 +2,7 @@ from odoo import api, fields, models
 import requests
 import ast
 import logging
+from pymongo import MongoClient
 
 _logger = logging.getLogger(__name__)
 
@@ -13,9 +14,36 @@ class BigDataAPISettings(models.Model):
     base_url = fields.Char("Base Url", required=True)
     api_key = fields.Char("API Key", required=True)
     q = fields.Char("q")
+    use_mongodb = fields.Boolean("Use MongoDB")
+    mongodb_connection_str = fields.Char("MongoDB Connection string")
+    mongodb_database = fields.Char("MongoDB Database")
+    mongodb_collection = fields.Char("MongoDB Collection")
 
-    def request_data_from_api(self):
-        response = requests.get(f"http://api.weatherapi.com/v1/current.json?key={self.api_key}&q={self.q}")
+    # -------------
+    # MongoDB
+    # -----------
+    
+    def store_data_in_mongodb(self, response):
+        with MongoClient(self.mongodb_connection_str) as cluster:
+            db = cluster[self.mongodb_database]
+            collection = db[self.mongodb_collection]
+            try:
+                data = ast.literal_eval(str(response.content.decode('utf-8')))
+                mdb_response = collection.insert_one(data)
+                _logger.info(f"Inserted data in mongoDB Object ID: {mdb_response.inserted_id}")
+            except Exception as e:
+                _logger.exception(e)
+    
+    # -------------
+    # End MongoDB
+    # ---------------
+
+    def _request_data_from_api(self):
+        uri = f"http://api.weatherapi.com/v1/current.json?key={self.api_key}&q={self.q}"
+        _logger.info(uri)
+        return requests.get(uri)
+
+    def request_data_from_api(self, response):
         data = ast.literal_eval(str(response.content.decode('utf-8')))
 
         if not 'location' in data:
@@ -27,34 +55,14 @@ class BigDataAPISettings(models.Model):
             ('name', '=', data['location']['name'])
             ]):
             return
-
-        record = self.env['bigdata.api.data'].create({
-            'name': data['location']['name'],
-            'region': data['location']['region'],
-            'country': data['location']['country'],
-            'lat': data['location']['lat'],
-            'lon': data['location']['lon'],
-            'tz_id': data['location']['tz_id'],
-            'last_updated': data['current']['last_updated'],
-            'temp_c': data['current']['temp_c'],
-            'is_day': data['current']['is_day'],
-            'condition': data['current']['condition']['text'],
-            'wind_kph': data['current']['wind_kph'],
-            'wind_degree': data['current']['wind_degree'],
-            'wind_dir': data['current']['wind_dir'],
-            'pressure_mb': data['current']['pressure_mb'],
-            'precip_mm': data['current']['precip_mm'],
-            'humidity': data['current']['humidity'],
-            'cloud': data['current']['cloud'],
-            'feelslike_c': data['current']['feelslike_c'],
-            'vis_km': data['current']['vis_km'],
-            'uv': data['current']['uv'],
-            'gust_kph': data['current']['gust_kph'],
-        })
         
-        _logger.info(f"record created {record.id}")
+        self.env['bigdata.api.data']._map_and_save_api_data(data)
 
     @api.model
     def _cron_call_api(self):
         for api in self.search([]):
-            api.request_data_from_api()
+            response = api._request_data_from_api()
+            if api.use_mongodb:
+                api.store_data_in_mongodb(response)
+            else:
+                api.request_data_from_api(response)

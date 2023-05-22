@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <menuitem
-                id="menu_bigdata"
-                name="Big Data"
-                sequence="10"/>
+       <menuitem
+              id="menu_bigdata"
+              name="Big Data"
+              sequence="10"/>
 
-         <menuitem
-                id="menu_bigdata_api_data"
-                name="API Data"
-                action="action_bigdata_api_data_view_tree"
-                parent="menu_bigdata"
-                sequence="5"/>
+       <menuitem
+              id="menu_bigdata_api_data"
+              name="API Data"
+              action="action_bigdata_api_data_view_tree"
+              parent="menu_bigdata"
+              sequence="5"/>
 
-         <menuitem
-                id="menu_bigdata_api_settings"
-                name="API Settings"
-                action="action_bigdata_api_settings_view_tree"
-                parent="menu_bigdata"
-                sequence="10"/>
+       <menuitem
+              id="menu_bigdata_api_settings"
+              name="API Settings"
+              action="action_bigdata_api_settings_view_tree"
+              parent="menu_bigdata"
+              sequence="10"/>
+
+       <menuitem
+            id="menu_bigdata_warehouse"
+            name="Warehouses"
+            action="action_bigdata_warehouse_view_tree"
+            parent="menu_bigdata"
+            sequence="5"/>
+
+       <menuitem
+            id="menu_bigdata_warehouse_data"
+            name="Warehouse data"
+            action="action_bigdata_warehouse_line_view_tree"
+            parent="menu_bigdata"
+            sequence="6"/>
     </data>
  </odoo>

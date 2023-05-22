@@ -5,140 +5,140 @@
         <record id="weatherapi_Sonderborg" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Sonderborg</field>
         </record>
 
         <record id="weatherapi_Graasten" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Graasten</field>
         </record>
 
         <record id="weatherapi_Kvaers" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Kvaers</field>
         </record>
 
         <record id="weatherapi_Dybbol" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Dybbol</field>
         </record>
 
         <record id="weatherapi_Nordborg" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Nordborg</field>
         </record>
 
         <record id="weatherapi_Augustenborg" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Augustenborg</field>
         </record>
 
         <record id="weatherapi_Horuphav" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Horuphav</field>
         </record>
 
         <record id="weatherapi_Guderup" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Guderup</field>
         </record>
 
         <record id="weatherapi_Nybol" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Nybol</field>
         </record>
 
         <record id="weatherapi_Fynshav" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Fynshav</field>
         </record>
 
         <record id="weatherapi_Blans" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Blans</field>
         </record>
 
         <record id="weatherapi_Svenstrup" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Svenstrup</field>
         </record>
 
         <record id="weatherapi_Skovby" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Skovby</field>
         </record>
 
         <record id="weatherapi_Avnbol" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Avnbol</field>
         </record>
 
         <record id="weatherapi_Hundslev" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Hundslev</field>
         </record>
 
         <record id="weatherapi_Holm" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Holm</field>
         </record>
 
         <record id="weatherapi_Ullerup" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Ullerup</field>
         </record>
 
         <record id="weatherapi_Adsbol" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Adsbol</field>
         </record>
 
         <record id="weatherapi_Skelde" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Skelde</field>
         </record>
 
         <record id="weatherapi_Stevning" model="bigdata.api.settings">
           <field name="name">weatherapi.com</field>
           <field name="base_url">http://api.weatherapi.com/v1/</field>
-          <field name="api_key">5e2d49dc7d054aca93a114602230905</field>
+          <field name="api_key">d647e7a4d84d4d819df93235232205</field>
           <field name="q">Stevning</field>
         </record>
 
