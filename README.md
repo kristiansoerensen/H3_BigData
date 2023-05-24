@@ -21,6 +21,10 @@ Every 10 minutes, a job will call the api, and checks on last updated, to not ma
 ## Tables 
 - bigdata_api_data - This table stores the data from the api 
 - bigdata_settings - Contains the api settings, and payload settings
+- bigdata_warehouse - warehouse and mongodb settings
+- bigdata_warehouse_line - warehouse data
+- bigdata_dashboard - Dashboard and mongodb settigns
+- bigdata_dashboard_line - Dashboard data
 
 ## Default Data
 On install, the bigdata_settings table will be loaded with 20 records of settings for different cities to weatherapi.com
