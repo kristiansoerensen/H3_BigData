@@ -32,9 +32,9 @@ class BigDataDashboard(models.Model):
 
     def action_populate_dashboard(self):
         # Unlink all reords older then 24 hours
-        find_after_datetime = datetime.now() + timedelta(days = -1)
+        find_after_datetime = datetime.now() + timedelta(days = -7)
         self.env['bigdata.dashboard.line'].search([
-            ('last_updated', '<=', find_after_datetime),
+            ('last_updated', '>=', find_after_datetime),
             ('dashboard_id', '=', self.id)
             ]).unlink()
 
