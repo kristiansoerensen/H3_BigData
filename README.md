@@ -10,6 +10,11 @@ Click on the menuitem "Big Data" in the menu list, and you will see all the data
 
 To make changes or new cities, go to api settings to create or edit existing record.
 
+### Warehousing
+Go to the tap warehousing, and create new record with the necessary data, to be able to connect to the mongodb database/collection
+
+When clicking on the "Update warehouse" button, Odoo will take a snapshot of the mongodb database, and import alle the data, and aggregate the date, and store it to the database, under the warehouse.
+
 ## Cron job
 Every 10 minutes, a job will call the api, and checks on last updated, to not make duplicates.
 
@@ -25,3 +30,6 @@ Data is updated ~15 min.
 
 ### v1
 Cron job calls weatherapi.com every 10 minutes and prevents data redundency, because the api updates the data every ~15 min
+
+### v2
+Now supports warehousing and dashboarding / graphs
