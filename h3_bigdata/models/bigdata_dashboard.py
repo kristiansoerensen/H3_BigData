@@ -42,8 +42,7 @@ class BigDataDashboard(models.Model):
         with MongoClient(self.mongodb_connection_str) as cluster:
             db = cluster[self.mongodb_database]
             collection = db[self.mongodb_collection]
-            cursor = collection.find().limit(100).sort("{$natural:-1}") 
-            _logger.info("cu3efsddsfsfsrsor")
+            cursor = collection.find().sort("{$natural:-1}").limit(100) 
             for document in cursor:
                 _logger.info("cursor")
                 self.env['bigdata.dashboard.line']._map_and_save_mongodb_document(document, self)
