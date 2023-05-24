@@ -33,5 +33,19 @@
             action="action_bigdata_warehouse_line_view_tree"
             parent="menu_bigdata"
             sequence="6"/>
+
+       <menuitem
+            id="menu_bigdata_dashboard"
+            name="Dashboard"
+            action="action_bigdata_dashboard_view_tree"
+            parent="menu_bigdata"
+            sequence="7"/>
+
+       <menuitem
+            id="menu_bigdata_dashboard_data"
+            name="Dashboard data"
+            action="action_bigdata_dashboard_line_view_tree"
+            parent="menu_bigdata"
+            sequence="7"/>
     </data>
  </odoo>

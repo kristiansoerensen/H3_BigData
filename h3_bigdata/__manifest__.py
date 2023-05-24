@@ -13,6 +13,8 @@
         'view/bigdata_api_data_views.xml',
         'view/bigdata_warehouse_views.xml',
         'view/bigdata_warehouse_line_views.xml',
+        'view/bigdata_dashboard_views.xml',
+        'view/bigdata_dashboard_line_views.xml',
         'view/menus.xml',
         'security/ir.model.access.csv',
         'data/ir_cron_data.xml'

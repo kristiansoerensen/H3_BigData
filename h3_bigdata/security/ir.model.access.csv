@@ -3,3 +3,5 @@ h3_bigdata.access_bigdata_api_settings,access_bigdata_api_settings,h3_bigdata.mo
 h3_bigdata.access_bigdata_api_data,access_bigdata_api_data,h3_bigdata.model_bigdata_api_data,base.group_user,1,1,1,1
 h3_bigdata.access_bigdata_warehouse,access_bigdata_warehouse,h3_bigdata.model_bigdata_warehouse,base.group_user,1,1,1,1
 h3_bigdata.access_bigdata_warehouse_line,access_bigdata_warehouse_line,h3_bigdata.model_bigdata_warehouse_line,base.group_user,1,1,1,1
+h3_bigdata.access_bigdata_dashboard,access_bigdata_dashboard,h3_bigdata.model_bigdata_dashboard,base.group_user,1,1,1,1
+h3_bigdata.access_bigdata_dashboard_line,access_bigdata_dashboard_line,h3_bigdata.model_bigdata_dashboard_line,base.group_user,1,1,1,1
